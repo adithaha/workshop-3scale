@@ -9,9 +9,9 @@ Backend API: https://api.finto.fi
 2. Drop down - API
 3. Integration > Methods & Metrics  
    Method - New method  
-     Friendly name: GET_vocabularies  
-     System name: GET_vocabularies  
-     Create Method  
+       Friendly name: GET_vocabularies  
+       System name: GET_vocabularies  
+       Create Method  
    Method - New method  
      Friendly name: GET_types  
      System name: GET_types  
