@@ -10,9 +10,9 @@ Backend API: https://api.finto.fi
 3. Integration > Methods & Metrics 
    ```
    Method - New method  
-       Friendly name: GET_vocabularies  
-       System name: GET_vocabularies  
-       Create Method  
+     Friendly name: GET_vocabularies  
+     System name: GET_vocabularies  
+     Create Method  
    Method - New method  
      Friendly name: GET_types  
      System name: GET_types  
@@ -37,6 +37,7 @@ Backend API: https://api.finto.fi
    Update and Test in Staging Environment
    ```
 5. Applications > Application Plan
+   ```
    Create Application Plan
      Name: Basic
      System Name: basic
@@ -60,6 +61,7 @@ Backend API: https://api.finto.fi
          Period: Minute
          Max. value: 6000
          Create usage limit
+    ```
        
 
 ```
