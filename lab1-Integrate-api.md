@@ -7,15 +7,15 @@ Backend API: https://api.finto.fi
   
 1. Login into 3Scale admin portal
 2. Drop down - API
-3. Integration > Methods & Metrics
-   Method - New method
-     Friendly name: GET_vocabularies
-     System name: GET_vocabularies
-     Create Method
-   Method - New method
-     Friendly name: GET_types
-     System name: GET_types
-     Create Method
+3. Integration > Methods & Metrics  
+   Method - New method  
+     Friendly name: GET_vocabularies  
+     System name: GET_vocabularies  
+     Create Method  
+   Method - New method  
+     Friendly name: GET_types  
+     System name: GET_types  
+     Create Method  
 4. Integration > Configuration - add the base URL of your API and save the configuration.
    Private Base URL: https://api.finto.fi
    Mapping Rules:
