@@ -1,7 +1,7 @@
 
 ## LAB 1 - Integrate API
 
-3Scale admin URL: https://3scale-admin.anugraha-3scale.apps.rhpds311.openshift.opentlc.com  
+3Scale admin URL: xxx  
 Backend API: https://api.finto.fi  
   
 1. Login into 3Scale admin portal
