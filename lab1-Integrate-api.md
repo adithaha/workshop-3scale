@@ -45,7 +45,7 @@ This workshop is based on 3Scale on premises, if you use one from 3Scale SaaS th
    ```
    You might get auth error if there is no developer account set up. You can ignore that.
 5. Applications > Application Plan
-   Create Basic plan
+   Create Basic plan.
    ```
    Create Application Plan
      Name: Basic
@@ -59,7 +59,7 @@ This workshop is based on 3Scale on premises, if you use one from 3Scale SaaS th
        Create usage limit
      GET_types - disable
    ```
-   Create Premium plan
+   Create Premium plan.
    ```
    Create Application Plan
      Name: Premium
@@ -76,9 +76,9 @@ This workshop is based on 3Scale on premises, if you use one from 3Scale SaaS th
        Max. value: 6000
        Create usage limit
     ```
-6. Register developer - Basic plan 
+6. Register developer - Basic plan.  
    There is existing account Developer, we will use that account to be registered with application plan.  
-   Register with Basic plan
+   Register with Basic plan.
    ```
    Choose dropdown Audience
    Account - Listing
@@ -109,7 +109,7 @@ This workshop is based on 3Scale on premises, if you use one from 3Scale SaaS th
    https://<staging-apicast>/rest/v1/types?lang=en&user_key=<user_key>
    ```
    You should get a auth error since Basic plan is unable to call types method.
-8. Register developer - Premium plan 
+8. Register developer - Premium plan.  
    Register developer with Premium plan, same procedure with step #6. Note the user key.
-9. Call API through API Gateway with Basic application plan. 
+9. Call API through API Gateway with Basic application plan.  
    Call vocabularies and types methods with user key from Premium plan, you should be able to call both.
