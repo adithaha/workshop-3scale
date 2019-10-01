@@ -77,7 +77,7 @@ This workshop is based on 3Scale on premises, if you use one from 3Scale SaaS th
        Create usage limit
     ```
 6. Register developer - Basic plan 
-   There is existing account Developer, we will use that account to be registered with application plan  
+   There is existing account Developer, we will use that account to be registered with application plan.  
    Register with Basic plan
    ```
    Choose dropdown Audience
@@ -89,27 +89,27 @@ This workshop is based on 3Scale on premises, if you use one from 3Scale SaaS th
      Create Application
    Note the User Key eg. 4567d96a9a0d34b590d1b93f92397a79
    ```
-7. Call API through API Gateway with Basic application plan
-   Note API Gateway URL
+7. Call API through API Gateway with Basic application plan.
+   Note API Gateway URL.
    ```
    Choose dropdown at top: finto
    Integration - Configuration
    Note API Gateway staging URL
    ```
-   Call vocabularies API  
+   Call vocabularies API.  
    Open API Gateway staging URL via browser, add path below with user key from #6:
    ```
    https://<staging-apicast>/rest/v1/vocabularies?lang=en&user_key=<user_key>
    ```
    You should get a response since Basic plan is able to call vocabularies method
    
-   Call Types API  
+   Call Types API.  
    Open API Gateway staging URL via browser, add path below with user key from #6:
    ```
    https://<staging-apicast>/rest/v1/types?lang=en&user_key=<user_key>
    ```
-   You should get a auth error since Basic plan is unable to call types method
+   You should get a auth error since Basic plan is unable to call types method.
 8. Register developer - Premium plan 
    Register developer with Premium plan, same procedure with step #6. Note the user key.
-9. Call API through API Gateway with Basic application plan 
+9. Call API through API Gateway with Basic application plan. 
    Call vocabularies and types methods with user key from Premium plan, you should be able to call both.
