@@ -102,16 +102,14 @@ This workshop is based on 3Scale on premises, if you use one from 3Scale SaaS th
    https://<staging-apicast>/rest/v1/vocabularies?lang=en&user_key=<user_key>
    ```
    You should get a response since Basic plan is able to call vocabularies method
+   
    Call Types API  
    Open API Gateway staging URL via browser, add path below with user key from #6:
    ```
    https://<staging-apicast>/rest/v1/types?lang=en&user_key=<user_key>
    ```
    You should get a auth error since Basic plan is unable to call types method
-8. 
-
-
-
-```
-xxxxx
-```
+8. Register developer - Premium plan 
+   Register developer with Premium plan, same procedure with step #6. Note the user key.
+9. Call API through API Gateway with Basic application plan 
+   Call vocabularies and types methods with user key from Premium plan, you should be able to call both.
