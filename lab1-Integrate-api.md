@@ -11,6 +11,7 @@ This workshop is based on 3Scale on premises, if you use one from 3Scale SaaS th
 2. You may get wizard page as this is your first time. Skip that wizard by clicking (x) on the top right corner
 3. (+) New API
    ```
+   () Define manually
    Name: Finto
    System Name: finto
    Add API
@@ -70,11 +71,11 @@ This workshop is based on 3Scale on premises, if you use one from 3Scale SaaS th
    Click Basic - Metrics, Methods, Limits & Pricing Rules 
      GET_vocabularies - Limits - New usage limit
        Period: Minute
-       Max. value: 6000
+       Max. value: 120
        Create usage limit
      GET_types - Limits - New usage limit
        Period: Minute
-       Max. value: 6000
+       Max. value: 120
        Create usage limit
     ```
 6. Register developer - Basic plan.  
