@@ -7,15 +7,15 @@ Prerequisite:
 
 This workshop is based on 3Scale on premises, if you use one from 3Scale SaaS there might be slight differences on procedures below.
   
-1. Login into 3Scale admin portal
-2. You may get wizard page as this is your first time. Skip that wizard by clicking (x) on the top right corner
-3. (+) New API
+  
    ```
-   () Define manually
+   Tab - API:API - Edit - I understand the consequences, proceed to delete 'API' service
    Name: Finto
    System Name: finto
    Add API
    ```
+1. Login into 3Scale admin portal
+2. Integrate this API
 3. Integration > Methods & Metrics 
    ```
    Method - New method  
@@ -46,20 +46,17 @@ This workshop is based on 3Scale on premises, if you use one from 3Scale SaaS th
    Update and Test in Staging Environment
    ```
    You might get auth error if there is no developer account set up. You can ignore that.
+5. Applications > Application Plan - Delete all Unlimited plan
 5. Applications > Application Plan
-   Create Basic plan.
+   Modify Basic plan.
    ```
-   Create Application Plan
-     Name: Basic
-     System Name: basic
-     Create Application Plan
-   Publish
    Click Basic - Metrics, Methods, Limits & Pricing Rules 
      GET_vocabularies - Limits - New usage limit
        Period: Minute
        Max. value: 60
        Create usage limit
      GET_types - disable
+   Update Application Plan
    ```
    Create Premium plan.
    ```
@@ -74,9 +71,10 @@ This workshop is based on 3Scale on premises, if you use one from 3Scale SaaS th
        Max. value: 120
        Create usage limit
      GET_types - Limits - New usage limit
-       Period: Minute
-       Max. value: 120
+       Period: Month
+       Max. value: 1000
        Create usage limit
+    Update Application Plan
     ```
 6. Register developer - Basic plan.  
    There is existing account Developer, we will use that account to be registered with application plan.  
