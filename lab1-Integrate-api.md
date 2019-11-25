@@ -8,12 +8,6 @@ Prerequisite:
 This workshop is based on 3Scale on premises, if you use one from 3Scale SaaS there might be slight differences on procedures below.
   
   
-   ```
-   Tab - API:API - Edit - I understand the consequences, proceed to delete 'API' service
-   Name: Finto
-   System Name: finto
-   Add API
-   ```
 1. Login into 3Scale admin portal
 2. Integrate this API
 3. Integration > Methods & Metrics 
