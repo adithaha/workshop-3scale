@@ -1,5 +1,5 @@
 
-## LAB 2 - Prepare Developer Portal
+## LAB 2 - Setup Developer Portal
 
 Prerequisite:
 - Completed Lab 1
