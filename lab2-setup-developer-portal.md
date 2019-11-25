@@ -4,27 +4,6 @@
 Prerequisite:
 - Completed Lab 1
   
-
-2. Delete default docs
-   ```
-   Active Docs - Echo - Delete - OK
-   ```
-2. Upload Finto docs
-   ```
-   Active Docs - Create your first spec
-   Name: Finto
-   System Name: finto
-   Check Publish?
-   Fill API JSON Spec from xxx
-   Change line 11: "host": "finto-2445581864856.production.gw.apicast.io"
-   To: "host": "api-<user>-apicast-production.anugraha-3scale.apps.rhpds3x.openshift.opentlc.com"
-   Create Service
-   ```
-2. Promote to Production
-   ```
-   Integration - Configuration
-   Promote v.1 to Production
-   ```
 1. Login into 3Scale admin portal - Tab Audience - Developer Portal - Content
 2. Change homepage title to Finto API - Homepage
    ```
