@@ -87,7 +87,7 @@ This workshop is based on 3Scale on premises, if you use one from 3Scale SaaS th
    Name: Finto
    System Name: finto
    Check Publish?
-   Fill API JSON Spec from xxx
+   Copy API JSON Spec from https://raw.githubusercontent.com/adithaha/workshop-3scale/master/finto-swagger.json
    Change line 11: "host": "finto-2445581864856.production.gw.apicast.io"
    To: "host": "api-<user>-apicast-production.anugraha-3scale.apps.rhpds3x.openshift.opentlc.com"
    Create Service
@@ -97,3 +97,4 @@ This workshop is based on 3Scale on premises, if you use one from 3Scale SaaS th
    Integration - Configuration
    Promote v.1 to Production
    ```
+   
