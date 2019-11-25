@@ -9,6 +9,8 @@ Prerequisite:
 2. User registration
    ```
    Top right corner menu - Sign in - Sign up
+     Review custom NPWP field is there
+     Custom legal term also showed at the bottom
    All entries must be filled.
    ```
 3. Account activation via admin
