@@ -4,13 +4,28 @@
 Prerequisite:
 - Completed Lab 1
   
-1. Login into 3Scale admin portal
-2. Tab Audience
+1. Login into 3Scale admin portal - Tab Audience
+2. Delete default docs
    ```
-   () Define manually
+   Active Docs - Echo - Delete - OK
+   ```
+2. Upload Finto docs
+   ```
+   Active Docs - Create your first spec
    Name: Finto
    System Name: finto
-   Add API
+   Check Publish?
+   Fill API JSON Spec from xxx
+   Change line 11: "host": "finto-2445581864856.production.gw.apicast.io"
+   To: "host": "api-<user>-production-staging.anugraha-3scale.apps.rhpds3x.openshift.opentlc.com"
+   ```
+   
+2. Developer Portal - Content
+3. Change title to Finto API - Homepage
+   ```
+   line 5: <h1>Echo API</h1>
+   change to <h1>Finto API</h1>
+   Save
    ```
 3. Integration > Methods & Metrics 
    ```
