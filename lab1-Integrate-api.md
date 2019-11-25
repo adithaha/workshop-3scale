@@ -46,8 +46,15 @@ This workshop is based on 3Scale on premises, if you use one from 3Scale SaaS th
    Update and Test in Staging Environment
    ```
    You might get auth error if there is no developer account set up. You can ignore that.
-5. Applications > Application Plan - Delete all Unlimited plan
-5. Applications > Application Plan
+5. Delete Unlimited plan, we will create another one later
+   ```
+   Applications > Application Plan - Delete all Unlimited plan
+   ```
+6. Disable default plan, let developer choose their plan after registration
+   ```
+   Applications > Application Plans - Default Plan - [empty]
+   ```
+7. Applications > Application Plan
    Modify Basic plan.
    ```
    Click Basic - Metrics, Methods, Limits & Pricing Rules 
@@ -76,11 +83,11 @@ This workshop is based on 3Scale on premises, if you use one from 3Scale SaaS th
        Create usage limit
     Update Application Plan
     ```
-6. Delete default docs
+8. Delete default docs
    ```
    Active Docs - Echo - Delete - OK
    ```
-7. Upload Finto docs
+9. Upload Finto docs
    ```
    Active Docs - Create your first spec
    Name: Finto
@@ -91,46 +98,8 @@ This workshop is based on 3Scale on premises, if you use one from 3Scale SaaS th
    To: "host": "api-<user>-apicast-production.anugraha-3scale.apps.rhpds3x.openshift.opentlc.com"
    Create Service
    ```
-8. Promote to Production
+10. Promote to Production
    ```
    Integration - Configuration
    Promote v.1 to Production
    ```
-    
-6. Register developer - Basic plan.  
-   There is existing account Developer, we will use that account to be registered with application plan.  
-   Register with Basic plan.
-   ```
-   Choose dropdown Audience
-   Account - Listing
-   Click Developer - Applications - (+) Create Application
-     Application Plan: Choose - Finto - Basic 
-     Name: finto-basic
-     Description: finto-basic
-     Create Application
-   Note the User Key eg. 4567d96a9a0d34b590d1b93f92397a79
-   ```
-7. Call API through API Gateway with Basic application plan.
-   Note API Gateway URL.
-   ```
-   Choose dropdown at top: finto
-   Integration - Configuration
-   Note API Gateway staging URL
-   ```
-   Call vocabularies API.  
-   Open API Gateway staging URL via browser, add path below with user key from #6:
-   ```
-   https://<staging-apicast>/rest/v1/vocabularies?lang=en&user_key=<user_key>
-   ```
-   You should get a response since Basic plan is able to call vocabularies method
-   
-   Call Types API.  
-   Open API Gateway staging URL via browser, add path below with user key from #6:
-   ```
-   https://<staging-apicast>/rest/v1/types?lang=en&user_key=<user_key>
-   ```
-   You should get a auth error since Basic plan is unable to call types method.
-8. Register developer - Premium plan.  
-   Register developer with Premium plan, same procedure with step #6. Note the user key.
-9. Call API through API Gateway with Basic application plan.  
-   Call vocabularies and types methods with user key from Premium plan, you should be able to call both.
