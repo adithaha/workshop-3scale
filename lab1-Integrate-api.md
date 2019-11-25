@@ -76,6 +76,27 @@ This workshop is based on 3Scale on premises, if you use one from 3Scale SaaS th
        Create usage limit
     Update Application Plan
     ```
+6. Delete default docs
+   ```
+   Active Docs - Echo - Delete - OK
+   ```
+7. Upload Finto docs
+   ```
+   Active Docs - Create your first spec
+   Name: Finto
+   System Name: finto
+   Check Publish?
+   Fill API JSON Spec from xxx
+   Change line 11: "host": "finto-2445581864856.production.gw.apicast.io"
+   To: "host": "api-<user>-apicast-production.anugraha-3scale.apps.rhpds3x.openshift.opentlc.com"
+   Create Service
+   ```
+8. Promote to Production
+   ```
+   Integration - Configuration
+   Promote v.1 to Production
+   ```
+    
 6. Register developer - Basic plan.  
    There is existing account Developer, we will use that account to be registered with application plan.  
    Register with Basic plan.
