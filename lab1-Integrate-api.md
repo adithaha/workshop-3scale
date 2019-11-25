@@ -8,7 +8,14 @@ Prerequisite:
 This workshop is based on 3Scale on premises, if you use one from 3Scale SaaS there might be slight differences on procedures below.
   
 1. Login into 3Scale admin portal
-2. (+) New API
+2. You may get wizard page as this is your first time.
+   ```
+   Name: Finto
+   Base URL: Base URL
+   Add this API >
+   ```
+   Or you can add without wizard  
+   (+) New API
    ```
    Name: Finto
    System Name: finto
