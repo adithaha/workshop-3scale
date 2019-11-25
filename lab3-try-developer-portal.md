@@ -1,10 +1,9 @@
 
-## LAB 2 - Try Developer Portal
+## LAB 3 - Try Developer Portal
 
 Prerequisite:
 - Completed Lab 1 and Lab2
   
-
 
 1. Go to Developer Portal https://<user>.anugraha-3scale.apps.rhpds3x.openshift.opentlc.com
 2. User registration
@@ -22,22 +21,49 @@ Prerequisite:
    Top right corner menu - Sign in
    Review API documentation at DOCUMENTATION tab.
    ```
-4. Add legal term. Accounts - Field Definitionn
+5. Register Finto API
    ```
-   Account - Create
-   Name: npwp
-   label: NPWP
-   Required: checked
-   Create
+   APPLICATIONS -> Create new applications -> select finto
+   Plan: basic
+   Name: finto-client
+   Description: finto-client
+   Create Application
+   Note down your unique user key (eg. bb629d06ad6bf40c736a735a315836cba).
    ```
-   Update
-5. Add new field. Developer Portal - Legal Term - Signup
+6. Try calling vocabularies API using your key
    ```
-   Subject to the terms and conditions of this Agreement and the License Agreement, you hereby grants to Red Hat, and Red Hat hereby accepts, a non-exclusive, non-transferable, non-sublicenseable, limited license to install and execute the object code version of the Software solely for the limited purpose to receive, store, display and exhibit the Digital Content Service, the Traditional Content Program and the Digital Carousel, as applicable, on the LLC Equipment solely in connection with its performance of and subject to all of the terms and conditions of this Agreement and only to the extent such Software is utilized by Red Hat.
+   Go to DOCUMENTATION tab
+   GET /vocabularies
+   LANG: en
+   USER_KEY: #user-key
+   Try it out!
+
+   You should be able to see response.
    ```
-   Update
-6. Open your Portal to the world
+7. Try calling types API using your key
    ```
-   Developer Portal - Content
-   Open your Portal to the world
+   Go to DOCUMENTATION tab
+   GET /types
+   LANG: en
+   USER_KEY: #user-key
+   Try it out!
+
+   You should see Authentication failed response.
+   ```
+8. Upgrade plan to premium
+   ```
+   Go to APPLICATIONS tab
+   finto-client
+   basic > review/changes
+   Review your existing basic plan
+    GET_vocabularies 60 hit / minute
+   Select premium plan
+    GET_vocabularies 6000 hit / minute
+    GET_types 6000 hit / minute
+   Request Plan Change
+   ```
+9. Try calling types API again using  new plan, you should be able to see response.
+10. Review your usage
+   ```
+   Go to STATISTICS tab. You should be able to see your usage statistic.
    ```
