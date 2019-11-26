@@ -5,7 +5,10 @@ Prerequisite:
 - Completed Lab 1 and Lab2
   
 
-1. Go to Developer Portal https://<user>.anugraha-3scale.apps.rhpds3x.openshift.opentlc.com
+1. Go to Developer Portal 
+   ```
+   https://<user>.anugraha-3scale.apps.rhpds3x.openshift.opentlc.com
+   ```
 2. User registration
    ```
    Top right corner menu - Sign in - Sign up
