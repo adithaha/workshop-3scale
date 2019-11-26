@@ -10,12 +10,14 @@ Prerequisite:
    line 5: <h1>Echo API</h1>
    change to <h1>Finto API</h1>
    Save
+   Publish
    ```
 3. Change Documentation description to Finto API - Documentation
    ```
    line 5: <p>Use our live documentation to learn about the Echo API</p>
    change to <p>Use our live documentation to learn about the Finto API</p>
    Save
+   Publish
    ```
 4. Add new field. Top Left Tab - Accounts - Field Definitionn
    ```
