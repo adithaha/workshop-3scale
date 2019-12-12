@@ -11,6 +11,10 @@ Prerequisite:
 3. Integration > Methods & Metrics 
    ```
    Method - New method  
+     Friendly name: GET_info  
+     System name: GET_info  
+     Create Method
+  Method - New method  
      Friendly name: GET_all  
      System name: GET_all  
      Create Method
@@ -22,10 +26,15 @@ Prerequisite:
      Delete Get /
      Add Mapping Rules:
        Verb: GET
-       Pattern: /api/get/all
+       Pattern: /api/info
+       + : 1
+       Metric or Method: GET_info
+     Add Mapping Rules:
+       Verb: GET
+       Pattern: /api/data/all
        + : 1
        Metric or Method: GET_all
-   API test GET request: /api/get/all
+   API test GET request: /api/info
    Update and Test in Staging Environment
    ```
    You might get auth error if there is no developer account set up. You can ignore that.
@@ -41,11 +50,11 @@ Prerequisite:
    Modify Basic plan.
    ```
    Click Basic - Metrics, Methods, Limits & Pricing Rules 
-     GET_all - Limits - New usage limit
+     GET_info - Limits - New usage limit
        Period: Minute
        Max. value: 60
        Create usage limit
-     GET_types - disable ??
+     GET_all - disable
    Update Application Plan
    ```
    Create Premium plan.
@@ -56,97 +65,18 @@ Prerequisite:
      Create Application Plan
    Publish
    Click Basic - Metrics, Methods, Limits & Pricing Rules 
-     GET_all - Limits - New usage limit
+     GET_info - Limits - New usage limit
        Period: Minute
        Max. value: 120
        Create usage limit
-     GET_types - Limits - New usage limit ??
+     GET_all - Limits - New usage limit
        Period: Month
-       Max. value: 1000
-       Create usage limit
-    Update Application Plan
-    ```
-8. Delete default docs
-   ```
-   Active Docs - Echo - Delete - OK
-   ```
-9. Upload Finto docs ??
-   ```
-   Active Docs - Create your first spec
-   Name: Finto
-   System Name: finto
-   Check Publish?
-   Copy API JSON Spec from https://raw.githubusercontent.com/adithaha/workshop-3scale/master/finto-swagger.json
-   Change line 11: "host": "finto-2445581864856.production.gw.apicast.io"
-   To: "host": "api-<user>-apicast-production.anugraha-3scale.apps.rhpds3x.openshift.opentlc.com"
-   Create Service
-   ```
-10. Promote to Production
-   ```
-   Integration - Configuration
-   Promote v.1 to Production
-   ```
-   
-
-
-
-   ```
-   You might get auth error if there is no developer account set up. You can ignore that.
-5. Delete Unlimited plan, we will create another one later
-   ```
-   Applications > Application Plan - Delete all Unlimited plan
-   ```
-6. Disable default plan, let developer choose their plan after registration
-   ```
-   Applications > Application Plans - Default Plan - [empty]
-   ```
-7. Applications > Application Plan
-   Modify Basic plan.
-   ```
-   Click Basic - Metrics, Methods, Limits & Pricing Rules 
-     GET_vocabularies - Limits - New usage limit
-       Period: Minute
        Max. value: 60
        Create usage limit
-     GET_types - disable
-   Update Application Plan
-   ```
-   Create Premium plan.
-   ```
-   Create Application Plan
-     Name: Premium
-     System Name: premium
-     Create Application Plan
-   Publish
-   Click Basic - Metrics, Methods, Limits & Pricing Rules 
-     GET_vocabularies - Limits - New usage limit
-       Period: Minute
-       Max. value: 120
-       Create usage limit
-     GET_types - Limits - New usage limit
-       Period: Month
-       Max. value: 1000
-       Create usage limit
     Update Application Plan
     ```
-8. Delete default docs
-   ```
-   Active Docs - Echo - Delete - OK
-   ```
-9. Upload Finto docs
-   ```
-   Active Docs - Create your first spec
-   Name: Finto
-   System Name: finto
-   Check Publish?
-   Copy API JSON Spec from https://raw.githubusercontent.com/adithaha/workshop-3scale/master/finto-swagger.json
-   Change line 11: "host": "finto-2445581864856.production.gw.apicast.io"
-   To: "host": "api-<user>-apicast-production.anugraha-3scale.apps.rhpds3x.openshift.opentlc.com"
-   Create Service
-   ```
 10. Promote to Production
    ```
    Integration - Configuration
    Promote v.1 to Production
    ```
-   
