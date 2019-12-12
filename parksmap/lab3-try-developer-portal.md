@@ -48,7 +48,12 @@
     GET_all 60 hit / minute
    Request Plan Change
    
-   Check your email to get upgrade request notification link.
+   Check admin email to get upgrade request notification link.
+   ```
+9. Upgrade plan to premium - Approval
+   ```
+   Check admin email to get upgrade request notification link.
+   Change Plan - Premium - Change Plan
    ```
 9. Try calling get all API again using new plan, you should be able to see response.
 10. Review your usage
