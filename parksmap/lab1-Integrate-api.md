@@ -7,7 +7,10 @@ Prerequisite:
   
   
 1. Login into 3Scale admin portal
-2. Integrate this API - nationalpark-<userx>
+2. Integrate this API
+   ```
+   nationalpark-<userx>
+   ```
 3. Integration > Methods & Metrics 
    ```
    Method - New method  
@@ -38,17 +41,18 @@ Prerequisite:
    Update and Test in Staging Environment
    ```
    You might get auth error if there is no developer account set up. You can ignore that.
-5. Delete Unlimited plan, we will create another one later
+5. Publish default service plan
    ```
-   Applications > Application Plan - Delete all Unlimited plan
-   ```
-6. Disable default plan, let developer choose their plan after registration
-   ```
-   Applications > Application Plans - Default Plan - [empty]
+   Subscriptions > Service Plans > Default - Publish
    ```
 7. Applications > Application Plan
-   Modify Basic plan.
+   Create Basic plan.
    ```
+   Create Application Plan
+     Name: Basic
+     System Name: Basic
+     Create Application Plan
+   Publish
    Click Basic - Metrics, Methods, Limits & Pricing Rules 
      GET_info - Limits - New usage limit
        Period: Minute
