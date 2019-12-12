@@ -26,7 +26,7 @@
    ```
 5. Try calling get info API using your key
    ```
-   https://<api-staging>/ws/info?user_key=xxx
+   https://<api-staging>/ws/info/?user_key=xxx
    
    You should see correct response.
    ```
