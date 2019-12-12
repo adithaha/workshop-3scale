@@ -37,7 +37,7 @@ Prerequisite:
        Pattern: /ws/data/all
        + : 1
        Metric or Method: GET_all
-   API test GET request: /ws/info
+   API test GET request: /ws/info/
    Update and Test in Staging Environment
    ```
    You might get auth error if there is no developer account set up. You can ignore that.
