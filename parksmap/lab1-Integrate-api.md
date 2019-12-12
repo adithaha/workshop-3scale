@@ -80,3 +80,4 @@ Prerequisite:
    Integration - Configuration
    Promote v.1 to Production
    ```
+11. Note your API staging and production environment, we will use those later
