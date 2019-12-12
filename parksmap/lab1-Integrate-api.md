@@ -79,9 +79,9 @@ Prerequisite:
        Create usage limit
     Update Application Plan
     ```
-10. Promote to Production
+8. Promote to Production
    ```
    Integration - Configuration
    Promote v.1 to Production
    ```
-11. Note your API staging and production environment, we will use those later
+9. Note your API staging and production environment, we will use those later
