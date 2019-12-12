@@ -1,0 +1,165 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Skosmos API",
+        "version": "v1",
+        "description": "The Skosmos REST API is a read-only interface to the data stored on the vocabulary server. The URL namespace is the base URL of the Skosmos instance followed by `/rest/v1/`. \n\nMost methods return the data as UTF-8 encoded JSON-LD, served using the `application/json` MIME type. The data consists of a single JSON object which includes JSON-LD context information (in the `@context` field) and one or more fields which contain the actual data. Some methods (`data`) return other formats (RDF/XML, Turtle, RDF/JSON) with the appropriate MIME type.\n\nThe API supports Cross-Origin Resource Sharing by setting the Access-Control-Allow-Origin HTTP header to `\"*\"` for all requests.\n\nThe API supports the JSONP convention of appending a callback parameter to any URL. The returned data will then be wrapped in a JavaScript function call using the function name provided as the callback parameter value. JSONP wrapped data will be served using the `application/javascript` MIME type.\n"
+    },
+    "schemes": [
+        "https"
+    ],
+    "host": "finto-2445581864856.production.gw.apicast.io",
+    "basePath": "/rest/v1",
+    "produces": [
+        "application/rdf+xml",
+        "text/turtle",
+        "application/ld+json",
+        "application/json"
+    ],
+    "paths": {
+        "/vocabularies": {
+            "get": {
+                "summary": "Available vocabularies",
+                "parameters": [
+                    {
+                        "name": "lang",
+                        "in": "query",
+                        "description": "language of labels, e.g. \"en\" or \"fi\"",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "user_key",
+                        "in": "query",
+                        "description": "user key parameter",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "a list of vocabularies on the server",
+                        "schema": {
+                            "$ref": "#/definitions/VocabularyList"
+                        }
+                    }
+                },
+                "tags": [
+                    "Global methods"
+                ]
+            }
+        },
+        "/types": {
+            "get": {
+                "summary": "Information about the types (classes) of objects contained in all  vocabularies",
+                "parameters": [
+                    {
+                        "name": "lang",
+                        "in": "query",
+                        "description": "language of labels, e.g. \"en\" or \"fi\"",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "user_key",
+                        "in": "query",
+                        "description": "user key parameter",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "produces": [
+                    "application/ld+json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "the data of the requested concept",
+                        "schema": {
+                            "$ref": "#/definitions/TypeList"
+                        }
+                    }
+                },
+                "tags": [
+                    "Global methods"
+                ]
+            }
+        }
+    },
+    "definitions": {
+        "VocabularyList": {
+            "type": "object",
+            "properties": {
+                "uri": {
+                    "type": "string"
+                },
+                "vocabularies": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Vocabulary"
+                    }
+                }
+            },
+            "required": [
+                "uri",
+                "vocabularies"
+            ]
+        },
+        "Vocabulary": {
+            "type": "object",
+            "properties": {
+                "uri": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "uri",
+                "id",
+                "title"
+            ]
+        },
+        "TypeList": {
+            "type": "object",
+            "properties": {
+                "uri": {
+                    "type": "string"
+                },
+                "types": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Type"
+                    }
+                }
+            }
+        },
+        "Type": {
+            "type": "object",
+            "properties": {
+                "uri": {
+                    "type": "string",
+                    "description": "Concept scheme URI"
+                },
+                "label": {
+                    "type": "string",
+                    "description": "Label of type"
+                },
+                "superclass": {
+                    "type": "string",
+                    "description": "URI of the superclass type, which this type is an extension/specialization of"
+                }
+            },
+            "required": [
+                "uri"
+            ]
+        }
+    }
+}
+
