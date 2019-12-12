@@ -29,15 +29,15 @@ Prerequisite:
      Delete Get /
      Add Mapping Rules:
        Verb: GET
-       Pattern: /api/info
+       Pattern: /ws/info
        + : 1
        Metric or Method: GET_info
      Add Mapping Rules:
        Verb: GET
-       Pattern: /api/data/all
+       Pattern: /ws/data/all
        + : 1
        Metric or Method: GET_all
-   API test GET request: /api/info
+   API test GET request: /ws/info
    Update and Test in Staging Environment
    ```
    You might get auth error if there is no developer account set up. You can ignore that.
