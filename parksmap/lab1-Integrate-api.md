@@ -17,7 +17,7 @@ Prerequisite:
      Friendly name: GET_info  
      System name: GET_info  
      Create Method
-  Method - New method  
+   Method - New method  
      Friendly name: GET_all  
      System name: GET_all  
      Create Method
