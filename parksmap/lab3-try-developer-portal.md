@@ -15,7 +15,11 @@
    ```
    Top right corner menu - Sign in
    ```
-4. Register Nationalpark API
+4. Subscribe Nationalpark API service plan
+   ```
+   SERVICES -> 	Subscribe to nationalpark-<userx>
+   ```
+4. Register Nationalpark API basic plan
    ```
    APPLICATIONS -> Create new applications -> select nationalpark-<userx>
    Plan: basic
