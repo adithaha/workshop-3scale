@@ -7,7 +7,7 @@ Prerequisite:
 
 1. Go to Developer Portal 
    ```
-   https://<user>.anugraha-3scale.apps.rhpds3x.openshift.opentlc.com
+   https://github.com/adithaha/workshop-3scale/blob/master/finto/url.md
    ```
 2. User registration
    ```
