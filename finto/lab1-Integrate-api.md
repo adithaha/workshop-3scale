@@ -2,7 +2,7 @@
 ## LAB 1 - Integrate API
 
 Prerequisite:
-- 3Scale installed with admin role (you can use trial version at https://www.3scale.net)
+- 3Scale admin portal: https://github.com/adithaha/workshop-3scale/blob/master/finto/url.md
 - Backend API: https://api.finto.fi this is public API from finto, be mindful to not put some loads on this. Be grateful they are publish this for free.
 
 This workshop is based on 3Scale on premises, if you use one from 3Scale SaaS there might be slight differences on procedures below.
